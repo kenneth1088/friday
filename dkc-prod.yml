@@ -14,6 +14,7 @@ services:
 
   web: 
     image: node:11-alpine
+    user: gitlab-runner
     working_dir: /app
     volumes:
       - .:/app

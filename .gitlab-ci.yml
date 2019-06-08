@@ -7,6 +7,6 @@ Deploy Docker:
   stage: deploy
   script:
     - docker-compose -f "dkc-prod.yml" down
-    - docker-compose -f "dkc-prod.yml" up -d w
+    - docker-compose -f "dkc-prod.yml" up -d 
     - docker-compose -f "dkc-prod.yml" run yarn install
     - pwd
