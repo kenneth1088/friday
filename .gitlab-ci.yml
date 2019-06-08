@@ -8,6 +8,6 @@ Deploy Docker:
   script:
     - docker-compose -f "dkc-prod.yml" down
     - docker-compose -f "dkc-prod.yml" up -d
-    - docker-compose -f "dkc-prod.yml" run web adduser gitlab-runner
+    # - docker-compose -f "dkc-prod.yml" run web adduser gitlab-runner
     - docker-compose -f "dkc-prod.yml" run --user="gitlab-runner" web yarn build
     - pwd
