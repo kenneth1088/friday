@@ -5,4 +5,4 @@ Deploy Docker:
   stage: deploy
   script:
     - docker-compose -f "dkc-prod.yml" down
-    - docker-compose -f "dkc-prod.yml" up -d
+    - docker-compose -f "dkc-prod.yml" up
