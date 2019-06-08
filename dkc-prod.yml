@@ -14,15 +14,12 @@ services:
 
   web: 
     image: node:11-alpine
-    user: gitlab-runner
     working_dir: /app
     volumes:
       - .:/app
       - modules:/app/node_modules    
     depends_on:
       - app
-
-    command: yarn build          
 
   app:
     image: node:11-alpine
