@@ -27,4 +27,13 @@ app.post('/api/insert', async (req, res) => {
   res.json({})
 })
 
+app.get('/api/delete', async (req, res) => {
+
+  await db('notes').where({
+    id: req.query.id
+  }).del()
+
+  res.json({})
+})
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
