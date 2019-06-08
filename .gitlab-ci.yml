@@ -4,6 +4,6 @@ stages:
 Deploy Docker:
   stage: deploy
   script:
-    - docker-compose -f "dkc-prod.yml" down
-    - docker-compose -f "dkc-prod.yml" up
-    - echo done
+    # - docker-compose -f "dkc-prod.yml" down
+    # - docker-compose -f "dkc-prod.yml" up
+    - pwd
