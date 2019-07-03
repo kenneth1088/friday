@@ -6,7 +6,8 @@ Deploy Docker:
     - master
   stage: deploy
   script:
-    - docker-compose -f "dkc-prod.yml" down
-    - docker-compose -f "dkc-prod.yml" up -d
-    - docker-compose -f "dkc-prod.yml" run --user="1001" web yarn build
+    # - docker-compose -f "dkc-prod.yml" down
+    # - docker-compose -f "dkc-prod.yml" up -d
+    # - docker-compose -f "dkc-prod.yml" run --user="1001" web yarn build
+    - ssh-keyscan compass-interactive.com >> ~/.ssh/known_hosts
     - pwd
